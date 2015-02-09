@@ -109,7 +109,7 @@ public class NavigationDrawerFragment extends Fragment {
 				.getThemedContext(), android.R.layout.simple_list_item_1,
 				android.R.id.text1, new String[] {
 						getString(R.string.title_section1),
-						getString(R.string.title_section2),
+						getString(R.string.title_section2),getString(R.string.title_section_managment),
 						getString(R.string.title_section3), 
 						getString(R.string.title_section4),}));
 		mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
@@ -269,12 +269,6 @@ public class NavigationDrawerFragment extends Fragment {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		if (mDrawerToggle.onOptionsItemSelected(item)) {
-			return true;
-		}
-
-		if (item.getItemId() == R.id.action_example) {
-			Toast.makeText(getActivity(), "Acció exemple TODO.", Toast.LENGTH_SHORT)
-					.show();
 			return true;
 		}
 
